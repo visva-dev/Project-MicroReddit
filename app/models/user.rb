@@ -1,4 +1,4 @@
-class Author < ApplicationRecord
+class User < ApplicationRecord
   has_many :posts
   has_many :comments
   validates :email, :username, uniqueness: true
