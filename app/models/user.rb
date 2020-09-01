@@ -1,8 +1,7 @@
 class User < ApplicationRecord
   has_many :posts
   has_many :comments
-  validates :email, :username, uniqueness: true
-  validates :email, :username, :password, presence: true
-  validates :username, length: { minimum: 4 }
-  validates :password, length: { minimum: 6 }
+  validates :email, :name, uniqueness: true
+  validates :email, :name, presence: true
+  validates :name, length: { minimum: 4 }
 end
